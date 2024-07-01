@@ -3,7 +3,7 @@ Vagrant.configure("2") do |config|
       web1.vm.box = "ubuntu/jammy64"
       web1.vm.hostname = "web1"
       web1.vm.network "private_network", ip: "192.168.56.101"
-      web1.vm.synced_folder "./pages/page2", "/var/www/html"
+      web1.vm.synced_folder "./pages/page1", "/var/www/html"
   
       web1.vm.provision "shell", inline: <<-SHELL
         sudo apt-get update
